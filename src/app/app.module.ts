@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+import {ButtonModule} from 'primeng/button';
+import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { DialogModule } from 'primeng/dialog';
+import {InputTextModule} from 'primeng/inputtext';
+import {PanelModule} from 'primeng/panel';
+import { ReactiveFormsModule } from '@angular/forms';
+import {SpeedDialModule} from 'primeng/speeddial';
+import {TableModule} from 'primeng/table';
+
 import { AppComponent } from './app.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
@@ -14,8 +22,16 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     AppComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    ButtonModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    DialogModule,
+    InputTextModule,
+    PanelModule,
+    ReactiveFormsModule,
+    SpeedDialModule,
+    TableModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),

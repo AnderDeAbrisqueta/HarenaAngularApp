@@ -1,0 +1,19 @@
+th,
+td {
+  text-align: center !important;
+}
+
+.add-button {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+}
+
+::ng-deep .p-panel-header {
+  background-color: #2196f3 !important;
+}
+
+::ng-deep .p-panel-title {
+  color: white;
+  font-size: 2.6em;
+}
