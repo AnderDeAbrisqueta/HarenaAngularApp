@@ -3,4 +3,5 @@ export interface OldPerson {
   name: string;
   imageUrl?: string;
   address: string;
+  telephone: string;
 }

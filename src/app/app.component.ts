@@ -23,6 +23,7 @@ export class AppComponent {
     name: new FormControl(''),
     imageUrl: new FormControl(''),
     address: new FormControl(''),
+    telephone: new FormControl(''),
   });
 
   formButtonText = 'Add oldPerson';
