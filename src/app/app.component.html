@@ -5,15 +5,12 @@
       [rows]="2"
       responsiveLayout="scroll"
     >
-      <!-- <ng-template pTemplate="caption">
-        <div class="flex align-items-center justify-content-between">SIMWAMA</div>
-      </ng-template> -->
       <ng-template pTemplate="header">
         <tr>
           <th></th>
-          <th>Nombre</th>
-          <th>Dirección</th>
-          <th>Teléfono</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Telephone</th>
           <th></th>
           <th></th>
           <th></th>
@@ -48,11 +45,11 @@
     </p-table>
     
     <div class="add-button">
-      <p-speedDial (click)="displayOldPersonForm = true" buttonClassName="p-button-warning"></p-speedDial>
+      <p-speedDial (click)="addButtonOldPerson()" buttonClassName="p-button-warning"></p-speedDial>
     </div>
     
     <p-dialog [(visible)]="displayOldPersonForm" [style]="{ width: '40vw' }">
-      <ng-template pTemplate="header"> Product </ng-template>
+      <ng-template pTemplate="header"> Old Person </ng-template>
     
       <form [formGroup]="oldPersonForm" (ngSubmit)="formSubmit()">
         <div class="card">
@@ -80,18 +77,19 @@
         
         <p-footer>
           <p-button 
-          type="submit"
+          (click)="formSubmit()"
+          
           [label]="formButtonText"
           styleClass="p-button-success"
           ></p-button>
           <p-button
-            (click)="displayOldPersonForm = false"
+            (click)="cancel()"
             label="Cancel"
             styleClass="p-button-danger"
           ></p-button>
         </p-footer>
       </form>
-      
+      <!-- type="submit" -->
     </p-dialog>
     
     

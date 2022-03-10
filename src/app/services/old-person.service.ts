@@ -28,7 +28,7 @@ export class OldPersonService {
   }
 
   async updateOldPerson(oldPerson: OldPerson) {
-    await setDoc(doc(this.firestore, `oldPerson/${oldPerson.oldPersonId}`), oldPerson);
+    await setDoc(doc(this.firestore, `oldPersons/${oldPerson.oldPersonId}`), oldPerson);
     
   }
 

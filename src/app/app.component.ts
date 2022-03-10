@@ -33,21 +33,25 @@ export class AppComponent {
   }
 
   addOldPerson() {
-   
     this.oldPersonService.addOldPerson(this.oldPersonForm.value);
-    this.oldPersonForm.reset({ purchasePrice: 0, salePrice: 0, stock: 0 });
+    this.oldPersonForm.reset();
+    
   }
 
   showOldPerson(id: string) {
+    this.displayOldPersonForm = true;
     this.oldPersonService
       .getOldPerson(id)
       .subscribe((data) => this.oldPersonForm.patchValue(data));
 
     this.formButtonText = 'Update oldPerson';
+    
   }
 
   updateOldPersonButton() {
     this.oldPersonService.updateOldPerson(this.oldPersonForm.value);
+    
+    
   }
 
   formSubmit() {
@@ -55,8 +59,10 @@ export class AppComponent {
       this.addOldPerson();
     } else {
       this.updateOldPersonButton();
+      
     }
     this.displayOldPersonForm = false;
+    
   }
 
   confirmDeleteOldPerson(oldPerson: OldPerson) {
@@ -68,5 +74,17 @@ export class AppComponent {
   deleteOldPerson() {
     this.oldPersonService.deleteOldPerson(this.idForDeletion);
     this.displayConfirmDelete = false;
+  }
+
+  addButtonOldPerson() {
+    this.displayOldPersonForm = true;
+    this.formButtonText = 'Add oldPerson';
+    this.oldPersonForm.reset();
+  }
+
+  cancel() {
+    this.displayOldPersonForm = false;
+    this.formButtonText = 'Add oldPerson';
+    this.oldPersonForm.reset();
   }
 }
