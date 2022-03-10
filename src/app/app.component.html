@@ -55,19 +55,19 @@
         <div class="card">
     
           <div class="field">
-            <label for="description">Nombre: </label>
+            <label for="description">Name: </label>
             <input pInputText id="name" type="text" formControlName="name" class="inputfield w-full"/>
           </div>
           <div class="field">
-            <label for="description">Dirección: </label>
+            <label for="description">Address: </label>
             <input pInputText id="address" type="text" formControlName="address" class="inputfield w-full"/>
           </div>
           <div class="field">
-            <label for="description">Teléfono: </label>
+            <label for="description">Telephone: </label>
             <input pInputText id="telephone" type="text" formControlName="telephone" class="inputfield w-full"/>
           </div>
           <div class="field">
-            <label for="description">Imagen: </label>
+            <label for="description">Image: </label>
             <input pInputText id="imageUrl" type="text" formControlName="imageUrl" class="inputfield w-full"/>
           </div>
           
@@ -78,7 +78,6 @@
         <p-footer>
           <p-button 
           (click)="formSubmit()"
-          
           [label]="formButtonText"
           styleClass="p-button-success"
           ></p-button>
@@ -89,7 +88,7 @@
           ></p-button>
         </p-footer>
       </form>
-      <!-- type="submit" -->
+      
     </p-dialog>
     
     

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
+import {AvatarModule} from 'primeng/avatar';
 import {ButtonModule} from 'primeng/button';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -23,6 +24,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
   ],
   imports: [
     AppRoutingModule,
+    AvatarModule,
     ButtonModule,
     BrowserModule,
     BrowserAnimationsModule,
